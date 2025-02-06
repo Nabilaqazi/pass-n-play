@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Game</title>
+    <link rel="stylesheet" href="../styles/chess.css">
+</head>
+<body>
+    <h1>Chess Game</h1>
+    <div id="game-setup">
+        <label>Player 1 Name:</label>
+        <input type="text" id="player1" placeholder="Player 1">
+        <label>Player 2 Name (or type 'AI' for Computer):</label>
+        <input type="text" id="player2" placeholder="Player 2">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    
+    <div id="chess-container" style="display: none;">
+        <h2 id="turn-indicator"></h2>
+        <div id="timer">Time Left: <span id="time-left">30</span> sec</div>
+        <div id="chessboard"></div>
+    </div>
+
+    <script src="../scripts/chess.js"></script>
+</body>
+</html>

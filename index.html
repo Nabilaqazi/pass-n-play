@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass n Play - Interactive Gaming Website</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #1a1a1a;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #f1f1f1 !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff4081 !important;
+        }
+
+        header {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #ff4081;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        header .btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+        }
+
+        header .btn:hover {
+            background-color: #d5006b;
+        }
+
+        .game-card {
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .game-card img {
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            height: 200px;
+        }
+
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-card .btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+        }
+
+        .game-card .btn:hover {
+            background-color: #d5006b;
+        }
+
+        .footer {
+            background-color: #1a1a1a;
+            color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 767px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Pass n Play</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>
+                    <li class="nav-item"><a class="nav-link" href="how-to-play.html">How to Play</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Welcome to Pass n Play</h1>
+        <p>Your ultimate destination for 2-player interactive games!</p>
+        <button class="btn">Browse Games</button>
+    </header>
+
+    <!-- Games Section -->
+    <section id="games" class="container py-5">
+        <h2 class="text-center mb-4">Popular Games</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Game 1 -->
+            <div class="col">
+                <div class="card game-card">
+                    <img src="assets/images/tic-tac-toe.png" class="card-img-top" alt="Tic Tac Toe">
+                    <div class="card-body">
+                        <h5 class="card-title">Tic Tac Toe</h5>
+                        <p class="card-text">A classic game of strategy and wit. Take turns marking X or O to win!</p>
+                        <a href="games/tic-tac-toe.html" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Game 2 -->
+            <div class="col">
+                <div class="card game-card">
+                    <img src="assets/images/connect-four.jpg" class="card-img-top" alt="Connect Four">
+                    <div class="card-body">
+                        <h5 class="card-title">Connect Four</h5>
+                        <p class="card-text">Drop discs in the grid and align four in a row to win!</p>
+                        <a href="games/connect-four.html" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Game 3 -->
+            <div class="col">
+                <div class="card game-card">
+                    <img src="assets/images/flappy-bird.jpg" class="card-img-top" alt="Flappy Bird">
+                    <div class="card-body">
+                        <h5 class="card-title">Flappy Bird</h5>
+                        <p class="card-text">Navigate the bird through pipes without hitting them. A fun challenge!</p>
+                        <a href="games/flappy-bird.html" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Game 4 -->
+            <div class="col">
+                <div class="card game-card">
+                    <img src="assets/images/chess.jpg" class="card-img-top" alt="Chess">
+                    <div class="card-body">
+                        <h5 class="card-title">Chess</h5>
+                        <p class="card-text">Challenge your opponent in a strategic battle of minds.</p>
+                        <a href="games/chess.html" class="btn btn-primary">Play Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Pass n Play. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
